@@ -1,18 +1,6 @@
-# 📦 Projeto OdontoPrev - Spring Boot + MongoDB + Azure DevOps
+#OdontoPrev - Spring Boot + MongoDB + Azure DevOps
 
-Este projeto consiste em uma aplicação web desenvolvida em **Java com Spring Boot**, que realiza o cadastro de **médicos** e **pacientes**, persistindo os dados em um banco **MongoDB Atlas** na nuvem. A aplicação é implantada automaticamente no **Azure App Service** via **Azure DevOps Pipeline**.
-
----
-
-## 🚀 Tecnologias Utilizadas
-- Java 17
-- Spring Boot 3
-- MongoDB Atlas (banco na nuvem)
-- Azure App Service (deploy)
-- Azure DevOps (CI/CD)
-- Gradle (build)
-- Thymeleaf (templates HTML)
-
+Este projeto consiste em uma aplicação web desenvolvida em **Java com Spring Boot**, que realiza o cadastro de **médicos** e **pacientes**, persistindo os dados em um banco **MongoDB Atlas** na nuvem. 
 ## ✅ Etapas para Testar no Azure DevOps (Professor)
 
 ### 1. Clonar o projeto:
@@ -48,18 +36,18 @@ https://odontoprev-rm554227.azurewebsites.net/medicos
 
 ---
 
-## 🌐 MongoDB Atlas
+## MongoDB Atlas
 - Banco: `odontoprevdb`
 - Coleções criadas automaticamente: `medicos`, `pacientes`
 
 ---
 
-## 📁 Scripts JSON (aplicável para API REST)
+##Scripts JSON (aplicável para API REST)
 > Como esta aplicação usa Thymeleaf e formulários HTML, **não é necessário enviar scripts JSON**.
 
 ---
 
-## 📌 Observações para o Professor
+##  Observações para o Professor
 - O deploy pode levar de 1 a 2 minutos na primeira execução
 - A aplicação já foi testada com cadastro, edição e exclusão funcionando
 - A estrutura segue padrão MVC com DTOs e validação integrada
@@ -67,4 +55,6 @@ https://odontoprev-rm554227.azurewebsites.net/medicos
 ---
 
 ## 👨‍💻 Desenvolvido por
-- Igor Akira
+- Igor Mendes Oviedo
+- Thiago Carrilo
+- Cauã
