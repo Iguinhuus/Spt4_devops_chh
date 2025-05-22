@@ -1,59 +1,67 @@
-Guia rápido para testes no Azure DevOps (para avaliação)
-Passo 1: Baixar o projeto
-No terminal, execute:
+1️⃣ Baixe o projeto
+No terminal, clone o repositório:
 
 bash
 Copiar
 git clone https://github.com/seu-usuario/sprint04-java.git
-Passo 2: Configurar pipeline no Azure DevOps
-Crie um novo projeto dentro do Azure DevOps
+2️⃣ Configure a pipeline no Azure DevOps
+Crie um projeto novo no Azure DevOps
 
-Configure uma pipeline apontando para o repositório clonado no GitHub
+Configure uma pipeline vinculada ao repositório GitHub clonado
 
-Confira se o arquivo azure-pipelines.yml está localizado na raiz do repositório
+Verifique se o arquivo azure-pipelines.yml está presente na raiz do projeto
 
-Passo 3: Criar conexão com Azure
-Navegue até Configurações do Projeto > Service Connections
+3️⃣ Estabeleça a conexão com o Azure
+Vá até Configurações do Projeto > Service Connections
 
-Configure uma nova conexão chamada exatamente:
+Crie uma conexão nomeada exatamente:
 
 nginx
 Copiar
 MyazureSubscription
-Isso é necessário para que a pipeline tenha permissão de gerenciar recursos na sua conta do Azure.
+Essa conexão garante que a pipeline possa criar e gerenciar recursos na sua conta Azure.
 
-Passo 4: Rodar a pipeline
-A execução fará o seguinte automaticamente:
+4️⃣ Execute a pipeline
+Ao executar, a pipeline irá:
 
-Criará os recursos necessários no Azure (grupo, plano e App Service)
+Criar o grupo de recursos, plano e App Service no Azure
 
-Compilará o artefato .jar da aplicação
+Gerar o build do artefato .jar
 
-Publicará a aplicação no endereço:
+Publicar a aplicação automaticamente no endereço:
 
 bash
 Copiar
 https://odontoprev-rm554227.azurewebsites.net/medicos
-Passo 5: Validar funcionamento
-Acesse a URL /medicos/novo para incluir médicos
+5️⃣ Valide a aplicação
+Acesse /medicos/novo para cadastrar médicos
 
-Use /pacientes/novo para inserir pacientes
+Acesse /pacientes/novo para cadastrar pacientes
 
-Consulte o MongoDB Atlas para verificar as coleções medicos e pacientes
+Verifique os dados salvos no MongoDB Atlas, nas coleções:
 
-MongoDB Atlas
-Banco: odontoprevdb
+medicos
 
-As coleções são criadas automaticamente pela aplicação
+pacientes
 
-Observações importantes
-O primeiro deploy pode levar alguns minutos para ser concluído
+🗄️ Banco de Dados MongoDB Atlas
+Banco utilizado: odontoprevdb
 
-Testes manuais de cadastro, edição e exclusão foram realizados com sucesso
+As coleções medicos e pacientes são criadas automaticamente ao rodar a aplicação pela primeira vez.
 
-Arquitetura MVC bem definida, com uso de DTOs e validação incorporada
+⚙️ Sobre os testes e API REST
+A aplicação utiliza Thymeleaf com formulários HTML para interação, portanto:
 
-Time de desenvolvimento
+Não é necessário usar scripts JSON para os testes manuais.
+
+⚠️ Observações Importantes
+O deploy inicial pode levar até 2 minutos
+
+Cadastro, edição e exclusão foram testados e estão funcionando corretamente
+
+Arquitetura MVC organizada, com DTOs e validação já implementadas
+
+👨‍💻 Desenvolvido por
 Igor Mendes Oviedo
 
 Thiago Carrilo
