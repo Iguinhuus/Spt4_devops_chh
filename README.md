@@ -53,6 +53,7 @@ https://odontoprev-rm554227.azurewebsites.net/medicos
 ---
 
 ##  Elaborado pela equipe:
-- Igor Mendes Oviedo
-- Thiago Carrilo
-- Cauã
+
+-Igor Oviedo RM553434
+-Cauã Loureiro RM553093
+-Thiago Carrillo RM553565
